@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "python-docker-app"
+version = "0.1.0"
+description = "This is a python application that will be containerised."
+authors = ["abhishek <abhisheksara21@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
