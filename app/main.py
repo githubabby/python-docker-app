@@ -5,6 +5,7 @@ from mylogger import CONFIG
 from fastapi import FastAPI
 from fastapi.responses import PlainTextResponse
 from fastapi.exceptions import RequestValidationError
+import uvicorn.logging as ulog
 
 logging.config.dictConfig(json.loads(CONFIG))
 
@@ -16,6 +17,7 @@ app = FastAPI(
 
 @app.get("/")
 async def hello_world():
+    ulog.logging.info("calling info from ulog")
     logging.info("hello world is called!")
     return {"message":"Hello World!"}
 
